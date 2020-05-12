@@ -12,8 +12,20 @@ function addObject(){
     inventory.push(newObject);
     console.log(inventory);
     // update items list
+    showInventory();
 }   // end addObject
 
 function onReady(){
     $('#addObjectButton').on('click', addObject );
+}
+
+function showInventory(){
+    let el = $('#inventoryOut');
+    // empty target element
+    el.empty();
+    // loop through inventory and append each to the element
+    for(let i = 0; i<inventory.length; i++){
+        const item = inventory[i];
+        el.append(`<li>${item.name}</li>`)
+    } // end for
 }
