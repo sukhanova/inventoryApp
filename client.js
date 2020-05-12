@@ -33,7 +33,15 @@ function search(){
         } // end match
     } // end for 
     // display matches on DOM
-    console.log(matches);
+        let el = $('#matchesOut');
+        el.empty();
+    // loop through matches
+    for(let j=0; j<matches.length; j++){
+        const item = matches[j];
+      // display each in matchesOut ul
+      el.append(`<li>${item.name}</li>`);
+    } //end for
+    
 } // end search
 
 function showInventory(){
