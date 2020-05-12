@@ -26,6 +26,6 @@ function showInventory(){
     // loop through inventory and append each to the element
     for(let i = 0; i<inventory.length; i++){
         const item = inventory[i];
-        el.append(`<li>${item.name}</li>`)
+        el.append(`<li>${item.name}: ${item.size} & ${item.color}</li>`);
     } // end for
 }
